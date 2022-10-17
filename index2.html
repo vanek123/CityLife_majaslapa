@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityLife Simulator</title>
+    <link rel="stylesheet" href="css/index2.css" />
+</head>
+<body>
+    <div id="main-bar">
+        <div id="topNavigation">
+            <a class="active citylife" href="#home">CityLife Simulator</a>
+            <a href="#" class="citylife">About us</a>
+            <a href="#" class="logreg" id="registracija">Registration</a>
+            <a href="#" class="logreg" id="login" onclick="openForm()">Login</a>
+        </div>
+
+        <!-- POP-UP FORM -->
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+              <h1>Login</h1>
+          
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required size="30">
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required size="30">
+          
+              <button type="submit" class="btn">Login</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+        <!-- POP-UP FORM -->
+
+        </div>
+        <div id="gif-cont">
+            <div id="gif-border">
+                <img id="gif" src="gif/videoplayback.gif">
+            </div>
+        </div>
+        <div id="images">
+            <div id="images-inside">
+                <img class="image" src="img/gsgsgs.jpg">
+                <img class="image" src="img/game_image.jpg">
+            </div>
+                
+        </div>
+        <div id="panels">
+            <div id="panel1">
+                <h2>About the game</h2>
+                <div id="inside-panel1">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione fugit temporibus odio autem. Similique ab quidem beatae corporis earum eum quia eius consectetur quod deleniti omnis, autem tempora, consequatur quasi.</p>
+                </div>
+            </div>
+            <hr>
+            <div id="panel2">
+                <h2>Latest releases</h2>
+                <div id="inside-panel2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium optio libero reprehenderit dolor tenetur iste vel nulla totam, accusamus corrupti, repellendus consectetur error laboriosam! Dolor delectus doloremque quasi earum cum.</p>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, aut fuga, quibusdam ad optio delectus vero voluptatem ab non dolore quo natus enim magnam rerum dolorum repellat at voluptas veritatis?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, aut fuga, quibusdam ad optio delectus vero voluptatem ab non dolore quo natus enim magnam rerum dolorum repellat at voluptas veritatis?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, aut fuga, quibusdam ad optio delectus vero voluptatem ab non dolore quo natus enim magnam rerum dolorum repellat at voluptas veritatis?</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

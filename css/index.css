@@ -1,0 +1,94 @@
+body {
+    background-image: url('../img/bg2.jpg');
+    margin: 0;
+}
+
+.topNavigation {
+background-color: #333;
+overflow: hidden;
+width: 50%;
+margin-left: 25%;
+}
+
+.topNavigation a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.topNavigation a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.topNavigation a.active {
+background-color: #04AA6D;
+color: white;
+}
+
+.midBar {
+background-color: #333;
+}
+
+.midBarContainer {
+color: #f2f2f2;
+display: flex;
+}
+
+.midBar2 {
+background-color: #333;
+
+}
+
+.midBarContainer2 {
+color: #f2f2f2;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+
+.midBar3 {
+background-color: #333;
+
+}
+
+.konteiners1 {
+color: #f2f2f2;
+}
+
+.konteiners2 {
+color: #f2f2f2;
+}
+
+.boobs {
+    background-color: #333;
+    color: #f2f2f2;
+}
+
+.boobs2 {
+    background-color: #333;
+    color: #f2f2f2;
+}
+
+.boobs3 {
+    background-color: #333;
+    color: #f2f2f2;
+}
+
+#image {
+    border: 3px solid white;
+    width: 25%;
+}
+
+#image2 {
+    border: 3px solid white;
+    width: 25%;
+}
+
+#joop {
+    border: 3px solid white;
+    margin-top: 5%;
+}
