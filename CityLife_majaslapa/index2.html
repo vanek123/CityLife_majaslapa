@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CityLife Simulator</title>
     <link rel="stylesheet" href="css/index2.css" />
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <div id="main-bar">
@@ -14,8 +15,8 @@
             <a href="#panels" class="citylife">About us</a>
             <a href='#panel3' class="citylife" id="LatestReleases">Latest releases</a>
             <a href='#gif-cont' class="citylife" id="AboutTheGame">About the game</a>
-            <a href="#" class="logreg" id="registracija">Registration</a>
-            <a href="#" class="logreg" id="login" onclick="openForm()">Login</a>
+            <a href="#" class="logreg" id="registracija" onclick="openForm()">Registration</a>
+            <a href="#" class="logreg" id="login" onclick="openForm()" >Login</a>
             <a href="pic1.jpeg" download class="download" id="buttonDownload">Download</a>
         </div>
 
@@ -87,51 +88,33 @@
             </div>
         </div>
 
-    <!-- POP-UP FORM -->
+    <!-- LOGIN FORM -->
     <form class="form-container" id="myForm">
-        <h1>Login</h1>
-
-        <div class="container">
-            <div class="screen">
-                <div class="screen__content">
-                    <form class="login">
-                        <div class="login__field">
-                            <i class="login__icon fas fa-user"></i>
-                            <input type="text" class="login__input" placeholder="User name / Email">
-                        </div>
-                        <div class="login__field">
-                            <i class="login__icon fas fa-lock"></i>
-                            <input type="password" class="login__input" placeholder="Password">
-                        </div>
-                        <button class="button login__submit">
-                            <span class="button__text">Log In Now</span>
-                            <i class="button__icon fas fa-chevron-right"></i>
-                        </button>				
-                    </form>
-                    <div class="social-login">
-                        <h3>log in via</h3>
-                        <div class="social-icons">
-                            <a href="#" class="social-login__icon fab fa-instagram"></a>
-                            <a href="#" class="social-login__icon fab fa-facebook"></a>
-                            <a href="#" class="social-login__icon fab fa-twitter"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="screen__background">
-                    <span class="screen__background__shape screen__background__shape4"></span>
-                    <span class="screen__background__shape screen__background__shape3"></span>		
-                    <span class="screen__background__shape screen__background__shape2"></span>
-                    <span class="screen__background__shape screen__background__shape1"></span>
-                </div>		
-            </div>
+        <div class="login-block">
+            <h1>Login</h1>
+            <input type="text" value="" placeholder="Username" id="username" />
+            <input type="password" value="" placeholder="Password" id="password" />
+            <button>Submit</button>
+            <button id="cancel" onclick="closeForm()">Cancel</button>
         </div>
+        
+
     
 
     </form>
-    <!-- POP-UP FORM -->
+    <!-- LOGIN FORM -->
 
-    <script src="js/script.js"></script>
-
+    <!-- REGISTRATION FORM -->
+    <form class="form-container2" id="myForm">
+        <div class="registration-block">
+            <h1>Registration</h1>
+            <input type="text" value="" placeholder="Username" id="username2" />
+            <input type="email" value="" placeholder="E-mail" id="email2">
+            <input type="password" value="" placeholder="Password" id="password2" />
+            <button>Submit</button>
+            <button id="cancel" onclick="closeForm()">Cancel</button>
+        </div>
+    <!-- REGISTRATION FORM -->
     </div>
 </body>
 </html>

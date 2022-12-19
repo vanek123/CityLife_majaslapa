@@ -238,7 +238,7 @@ body {
     right: 15px;
     border: 3px solid #f1f1f1;
     z-index: 9;
-
+    
 }
 
 .form-container {
@@ -255,8 +255,8 @@ body {
 }
 
 .form-container input[type=text], .form-container input[type=password] {
-    margin-left: 12%;
-    margin-top: 20%;
+
+  
     border: none;
     background: #f1f1f1;
 }
@@ -264,13 +264,13 @@ body {
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
     background-color: #ddd;
     outline: none;
-    margin-left: 2%;
+    
 }
 
 
 
 .form-container .cancel {
-    background-color: red;
+    background-color: rgba(0, 105, 146, 0.5);
 }
 
 
@@ -278,24 +278,173 @@ body {
 
 /* POP-UP FORM */
 
-::-webkit-scrollbar {
-    width: 20px;
-}
-  
-::-webkit-scrollbar-track {
-    background-color: #33383B;
+
+
+.login-block {
+    width: 320px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid rgba(0, 105, 146, 0.5);
+    margin: 0 auto;
+    
 }
 
-::-webkit-scrollbar-thumb {
-    background-color: #d6dee1;
-    border-radius: 20px;
-    border: 6px solid transparent;
-    background-clip: content-box;
-}
-  
-::-webkit-scrollbar-thumb:hover {
-    background-color: #a8bbbf9a;
+.login-block h1 {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+.login-block input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: Montserrat;
+    padding: 0 20px 0 50px;
+    outline: none;
+}
 
+<<<<<<< HEAD
+=======
+.login-block input#username {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#username:focus {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password:focus {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input:active, .login-block input:focus {
+    border: 1px solid rgba(0, 105, 146, 0.5);
+}
+
+.login-block button {
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 105, 146, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 105, 146, 0.5);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-block button:hover {
+    background: rgba(0, 105, 146, 0.5);
+}
+
+#cancel {
+    margin-top: 4%;
+}
+
+
+
+/* Registration Form */
+
+.registration-block {
+    width: 320px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid rgba(0, 105, 146, 0.5);
+    margin: 0 auto;
+    
+}
+
+.registration-block button {
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 105, 146, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 105, 146, 0.5);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+    cursor: pointer;
+}
+
+.registration-block h1 {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.registration-block input {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: Montserrat;
+    padding: 0 20px 0 50px;
+    outline: none;
+}
+
+.registration-block input#username2 {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.registration-block input#username2:focus {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.registration-block input#email2 {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.registration-block input#email2:focus {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.registration-block input#password2 {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.registration-block input#password2:focus {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.registration-block input:active, .registration-block input:focus {
+    border: 1px solid rgba(0, 105, 146, 0.5);
+}
+>>>>>>> 6f1bffdf06d603c987987938b35cf4a4a1bdbcc4
