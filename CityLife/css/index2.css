@@ -1,0 +1,454 @@
+body {
+    margin: 0;
+
+    background-image: url('../img/bg2.jpg');
+    background-size: cover;
+
+}
+.image img{
+    filter: brightness(40%)
+}
+
+/* Top Navigation */
+
+.download {
+    float: right;
+    color: #80ff91;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    
+}
+
+.download:hover {
+    background-color: rgb(131, 255, 148);
+    color: black;
+}
+
+#topNavigation {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+.citylife {
+    float: left;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#registracijas_forma {
+    background-color: #d4d4d4;
+    width: 50%;
+}
+
+.logreg {
+    float: right;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+.citylife:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.logreg:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.citylife2 {
+    float: left;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Top Navigation */
+
+/* gifka */
+
+#gif-cont {
+    margin: auto;
+    padding-top: 5px;
+}
+
+#gif {
+    display: flex;
+    margin-right: 5%;
+    padding: 1%;
+    border: 1px inset black;
+    box-shadow: 0px 5px 15px black;
+    background-color: rgba(0, 105, 146, 0.8);
+}
+
+#gif-border {
+    border: 1px inset black;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 105, 146, 0.5);
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px black;
+    margin-top: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#about_the_game {
+    width: 30%;
+}
+
+#about_the_game h2 {
+    text-align: center;
+    color: white;
+}
+
+#about_the_game p {
+    padding-top: 2%;
+}
+
+/* gifka */
+
+/* kartinki */
+
+#images {
+ 
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#images-inside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(0, 105, 146, 0.5);
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    box-shadow: 0px 5px 15px black;
+    border-radius: 5px;
+}
+
+.image {
+    width: 30%;
+    margin-top: 2%;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    border: 1px solid black;
+    box-shadow: 0px 5px 5px black;
+}
+
+/* kartinki */
+
+/* About the game and Latest releases */
+
+#panels {
+    display: flex;
+    
+    
+    
+    color: #fff;
+    height: 100%;
+    
+}
+
+#inside-panel1 {
+    border: 1px inset black;
+    background-color: rgba(0, 105, 146, 0.5);
+    color: #fff;
+    box-shadow: 0px 5px 15px black;
+}
+
+#inside-panel2 {
+    border: 1px inset black;
+    background-color: rgba(0, 105, 146, 0.5);
+    display: flex;
+    width: 60%;
+    margin: auto;
+    color: #fff;
+    justify-content: space-around;
+    box-shadow: 0px 5px 15px black;
+}
+
+#inside-panel1 p {
+    padding: 5px;
+}
+
+#inside-panel2 p {
+    padding: 5px;
+}
+
+#panels h2 {
+    margin-left: 14.5%;
+}
+
+#inside-panel3{
+    border: 1px inset black;
+    background-color: rgba(0, 105, 146, 0.5);
+    width: 60%;
+    margin: auto;
+    color: #fff;
+    box-shadow: 0px 5px 15px black;
+}
+
+#inside-panel3 p {
+    padding: 5px;
+}
+
+/* About the game and Latest releases */
+
+#footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    margin: auto;
+}
+
+#footer p {
+    color: #fff;
+}
+
+#panel1 {
+    padding-bottom: 50px;
+
+}
+
+#panel2 {
+    padding-bottom: 50px;
+}
+
+/* LOGIN FORM */
+
+.form-container {
+    display: none;
+    max-width: 300px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+.form-container input[type=text], .form-container input[type=password], .form-container input[type=email]{
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus, .form-container input[type=email]:focus {
+    background-color: #ddd;
+    outline: none;
+    
+}
+
+.form-container .cancel {
+    background-color: rgba(0, 105, 146, 0.5);
+}
+
+.login-block {
+    width: 320px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid rgba(0, 105, 146, 0.5);
+    margin: 0 auto;
+    
+}
+
+.login-block h1 {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.login-block input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: Montserrat;
+    padding: 0 20px 0 50px;
+    outline: none;
+}
+
+.login-block input#username {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#username:focus {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password:focus {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input:active, .login-block input:focus {
+    border: 1px solid rgba(0, 105, 146, 0.5);
+}
+
+.login-block button {
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 105, 146, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 105, 146, 0.5);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-block button:hover {
+    background: rgba(0, 105, 146, 0.5);
+}
+
+#cancel {
+    margin-top: 4%;
+}
+
+/* LOGIN FORM beigas */
+
+/* REGISTRATION FORM */
+.registration-block {
+    width: 320px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid rgba(0, 105, 146, 0.5);
+    margin: 0 auto;
+    
+}
+
+.registration-block h1 {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.registration-block input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: Montserrat;
+    padding: 0 20px 0 50px;
+    outline: none;
+}
+
+.registration-block input#username2 {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.registration-block input#username2:focus {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.registration-block input#password2 {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.registration-block input#password2:focus {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.registration-block input#email {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.registration-block input#email:focus {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.registration-block input:active, .registration-block input:focus {
+    border: 1px solid rgba(0, 105, 146, 0.5);
+}
+
+.registration-block button {
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 105, 146, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 105, 146, 0.5);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+    cursor: pointer;
+}
+
+.registration-block button:hover {
+    background: rgba(0, 105, 146, 0.5);
+}
+
+/* REGISTRATION FORM beigas */
+
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: #33383B;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf9a;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
