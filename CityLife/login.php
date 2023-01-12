@@ -24,8 +24,14 @@
           $_SESSION['username'] = $row['username'];
           $_SESSION['email'] = $row['email'];
           $_SESSION['role_ID'] = $row['role_ID'];
-    
-          header('location:index.php');
+        
+          if ($_SESSION['role_ID'] == 1) {
+            header('location:admin.php');
+          }
+          else {
+            header('location:index.php');
+          }
+          
        }
        else //if there is no result
        {
