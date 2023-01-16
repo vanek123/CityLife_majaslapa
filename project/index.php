@@ -83,20 +83,43 @@
                             <div id='news-panel' style="border: 1px inset black;
                                 background-color: rgba(0, 105, 146, 0.5);
                                 width: 60%;
+                                
                                 margin: auto;
                                 color: #fff;
                                 box-shadow: 0px 5px 15px black;";>
                             <?php echo " 
                                     <form method='POST' action='news.php'>
-                                        
-                                            <input type='text' value='' placeholder='Title' name='title' id='title'></input>
-                                            <textarea type='text' value='' placeholder='Description' name='description' id='description' style='font-family:sans-serif;font-size:1.2em;margin-top:0%;margin-left:20%;'></textarea>
-                                            <button type='submit' name='submit_news'>Submit</button>
+                                        <div>
+                                            <input type='text' value='' placeholder='Title' name='title' id='title' 
+                                            style='width: 50%;
+                                                padding: 12px 20px;
+                                                margin-left:25%;
+                                                margin-top:2%;
+                                                box-sizing: border-box;
+                                                text-align:center;
+                                                margin-right: auto;'></input>
+                                        </div>
+                                            "?>
+                            <?php echo "
+                                            <textarea type='text' value='' placeholder='Description' name='description' 
+                                                id='description' style='width: 49.5% ;
+                                                margin-top:2%;margin-left:25%;text-align:center;'></textarea>
+                                                <div>
+                                                <button type='submit' name='submit_news' style='margin-left: 47%;
+                                                margin-top:2%;
+                                                margin-bottom:2%;
+                                                color: black;
+                                                background-color: white;
+                                                padding: 14px 16px;
+                                                text-decoration: none;
+                                                font-size: 17px;'>Submit</button>
+                                                </div>
+                                            
                                         
                                     </form>  
                                   ";
                             ?>
-            </div>   
+                            </div>   
                 <?php                 
                     }
                 }
@@ -116,12 +139,12 @@
                             if (isset($_SESSION['username'])) {
                                 if ($_SESSION['role_ID'] === 1) {  
                                         ?>
-                                        <a href="deleteNews.php?Info_ID=<?php echo $row["Info_ID"]; ?>">Delete</a>
+                                        <a style="color: red; margin-left: 49%;" href="deleteNews.php?Info_ID=<?php echo $row["Info_ID"]; ?>">Delete</a>
                             <?php 
                                 } 
                             }
                             ?>
-                        <p style="margin-left:32%;">--------------------------------------------------------------------------------------</p>
+                        <p style="margin-left:35%;">--------------------------------------------------------------------------------------</p>
                         <?php
                         $i++;
                         
