@@ -1,8 +1,8 @@
 <?php
-  $DB_Host = 'sql200.epizy.com';
-  $DB_User = 'epiz_33230964';
-  $DB_Pass = 'qjQKIKGG3vbu';
-  $DB_Name = 'epiz_33230964_CityLife_Simulator2';
+  $DB_Host = 'sql308.epizy.com';
+  $DB_User = 'epiz_33470203';
+  $DB_Pass = 'DzYFj1PnKn4sL';
+  $DB_Name = 'epiz_33470203_citylife_simulator';
   //Connecting to the database, catching any errors that can be present.
   try{
     $DBconnection = new PDO("mysql:host=$DB_Host; dbname=$DB_Name" , $DB_User, $DB_Pass);

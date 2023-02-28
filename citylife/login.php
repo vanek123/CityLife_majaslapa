@@ -2,7 +2,7 @@
     session_start(); //Start the session.
     require_once 'connection.php'; //Require connection file to connect to database.
     
-    if(isset($_POST['username']) & isset($_POST['password'])) //if email and password are set.
+    if(isset($_POST['login']))  //if email and password are set.
     {
        $userPassword = $_POST['password'];//Get password and username
        $username = $_POST['username'];
@@ -15,25 +15,33 @@
        //$result = 0;
         
        $result = $DBconnection->query($SQL_stmt);
-       
+        $row = $result->fetch();
+
+       if (empty($username) || empty($userPassword)) {
+        header("location: index.php?activity=login_empty");
+        exit();
+    }
+    elseif ($row) {
+            $_SESSION['User_ID'] = $row['User_ID'];
+            $_SESSION['username'] = $row['username'];
+            $_SESSION['email'] = $row['email'];
+            $_SESSION['role_ID'] = $row['role_ID'];
+
+        header('location: index.php?activity=successful');
+        exit();
+        }    
+
+        else {
+            header('location: index.php?activity=incorrect_user_login_credentials');
+            exit(); 
+        }
         
-       if($row = $result->fetch())
-       {
-          //If there is a result, set the session variables
-          $_SESSION['User_ID'] = $row['User_ID'];
-          $_SESSION['username'] = $row['username'];
-          $_SESSION['email'] = $row['email'];
-          $_SESSION['role_ID'] = $row['role_ID'];
     
-          header('location:index.php');
-       }
-       else //if there is no result
-       {
-           header('location:index.php?activity=incorrect_user_login_credentials');
-       }
+
     }
     else
     {
-        header('location:index.php?activity=email_or_password_not_set');
+        header('location: index.php?activity=username_or_password_not_set');
+        exit();
     }
 ?>

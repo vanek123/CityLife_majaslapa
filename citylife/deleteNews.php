@@ -6,14 +6,11 @@ $sql = "SELECT * FROM info ORDER BY Info_ID DESC";
 
 if(isset($_GET['Info_ID'])) {
    $id = $_GET['Info_ID'];
-   $delete = "DELETE FROM `info` WHERE `Info_ID` ='$id'";
+   $delete = "DELETE FROM info WHERE Info_ID ='$id'";
    $result = $DBconnection->query($delete);
-   if ($result) {
 
       header("Location: index.php?success=successfully deleted");
-   } else {
-      header("Location: index.php?error=unknown error occurred");
-   }
+
 }else {
    header("Location: ../index.php?error=smth gone wrong");
 }

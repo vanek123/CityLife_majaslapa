@@ -2,7 +2,7 @@
   session_start(); //Start the session.
   require_once 'connection.php'; //Require connection file to connect to database.
 
-  $sql = "SELECT * FROM info ORDER BY Info_ID DESC";
+  $sql = "SELECT Info_ID, title, description, date, img, User_ID FROM info ORDER BY Info_ID DESC";
   $result = $DBconnection->query($sql);
   
   
@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CityLife Simulator</title>
-    <link rel="stylesheet" href="css/index2.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -24,14 +24,14 @@
             <a class="citylife2" href="#gif-cont" style="background-color: #00bcd4;">
             <?php echo "CityLife Simulator"?></a>
             <a href="#panel2" class="citylife">About us</a>
-            <a href='#panels' class="citylife" id="LatestReleases">Latest releases</a>
-            <a href='#gif-cont' class="citylife" id="AboutTheGame">About the game</a>
+            <a href='#panel3' class="citylife">Latest releases</a>
+            <a href='#gif-cont' class="citylife">About the game</a>
             <!-- <a href="#" class="logreg" onclick="openRegistration()">Registration</a> -->
             <?php 
             
             if (isset($_SESSION['username'])) {
                 echo "<a href='logout.php' class='logreg'>Logout</a>";
-                echo "<a href='pic1.jpeg' download class='download' id='buttonDownload'>Download</a>";
+                echo "<a href='game_image.jpg' download class='download' id='buttonDownload'>Download</a>";
                 
             }
             else {
@@ -43,7 +43,7 @@
             <!-- <a href="#" class="logreg" onclick="openLogin()">Login</a> -->
             
             <!-- <a href="pic1.jpeg" download class="download" id="buttonDownload">Download</a> -->
-            <a class="log"><?php if (isset($_SESSION['username'])) { echo "Logged in as: ", $_SESSION['username']; }?></a>
+            <a class="loggedin"><?php if (isset($_SESSION['username'])) { echo "Logged in as: ", $_SESSION['username']; }?></a>
         </div>
 
         <div id="gif-cont">
@@ -100,10 +100,10 @@
                                                 text-align:center;
                                                 margin-right: auto;'></input>
                                         </div>
-                                            "?>
+                                            "; ?>
                             <?php echo "
                                             <textarea type='text' value='' placeholder='Description' name='description' 
-                                                id='description' style='width: 49.5%; padding-top: 1%;
+                                                id='description' style='width: 49.5% ;
                                                 margin-top:2%;margin-left:25%;text-align:center;'></textarea>
                                                 <div>
                                                 <button type='submit' name='submit_news' style='margin-left: 47%;
@@ -140,7 +140,7 @@
                             if (isset($_SESSION['username'])) {
                                 if ($_SESSION['role_ID'] == 1) {  
                                         ?>
-                                        <a style="color: red; margin-left: 49%;" href="deleteNews.php?Info_ID=<?php echo $row["Info_ID"]; ?>">Delete</a>
+                                        <a style="color: red; margin-left: 49%;" href="deleteNews.php?Info_ID=<?php echo $row['Info_ID']; ?>">Delete</a>
                             <?php 
                                 } 
                             }
@@ -157,35 +157,50 @@
             </div>
         </div>
 
-        <footer> 
-            <div class='footer-div' style='background-color: #333; padding-top: 1%; padding-bottom: 1%; margin-top: 1%; '>
-                <p class='footer' style='color: #f2f2f2; padding-left: 1%;'>All rights reserved.<p>
-            </div>
-        </footer>
-
     <!-- LOGIN FORM -->
     <form class="form-container" method="POST" action="login.php" id="js_login">
         <div class="login-block" id="js_login" >
             <h1>Login</h1>
             <input type="text" value="" placeholder="Username" name="username" id="username" />
             <input type="password" value="" placeholder="Password" name="password" id="password" />
-            <button type="submit">Submit</button>
-            <button id="cancel" onclick="closeLogin()">Cancel</button>
+            <button type="submit" name="login">Submit</button>
+            <button class="cancel" onclick="closeLogin()">Cancel</button>
         </div>
     </form>
 
     <!-- REGISTRATION FORM -->
 
-    <form class="form-container" action="registration.php" method="POST" id="jsReg">
+    <form class="form-container"  method="POST" action="registration.php" id="jsReg">
         <div class="registration-block">
             <h1>Registration</h1>
             <input type="text" value="" placeholder="Username" name="username" id="username2" />
             <input type="email" value="" placeholder="E-mail" name="email" id="email"/>
             <input type="password" value="" placeholder="Password" name="password" id="password2"/>
             <button type="submit" name="reg_user">Register</button>
-            <button id="cancel" onclick="closeRegistration()">Cancel</button>
+            <button class="cancel" onclick="closeRegistration()">Cancel</button>
         </div>
     </form>
+
+    
+
+    <footer>
+        <div id="footer">
+            <p> © CityLife Simulator 2023 | All rights reserved | <?php if (isset($_SESSION['username'])) {
+                                                                            if ($_SESSION['role_ID'] == 1) {
+            echo "<a class='help' href='https://docs.google.com/document/d/1PO9BU6eA0jZRK5cwClbuVknPkzyga7qe/edit?usp=sharing&ouid=107871540731265844431&rtpof=true&sd=true'> Help </a>";
+                                                                            }
+            else {
+                echo "<a class='help' href='https://docs.google.com/document/d/1yFY5tDzyJp6PuDTeQUeP19iohRjn0F1Y/edit?usp=sharing&ouid=107871540731265844431&rtpof=true&sd=true'> Help </a>";
+            }
+            }
+            else {
+                echo "<a class='help' href='https://docs.google.com/document/d/1yFY5tDzyJp6PuDTeQUeP19iohRjn0F1Y/edit?usp=sharing&ouid=107871540731265844431&rtpof=true&sd=true'> Help </a>";
+            }
+            ?></p>
+        </div>
+    </footer>
+
+    <?php include 'message.php'?>
 
     </div>
 </body>
