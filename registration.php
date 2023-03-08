@@ -8,15 +8,6 @@ $username = "";
 $email = "";
 $errors = array();
 
-//$check = "SELECT username FROM users WHERE username = '$username' ";
-//$reg = $DBconnection->query($check);
-//if ($check->rowCount() > 0) {
-//    flash('Username already exists!');
-//    header('Location: index.php'); // return to index.php
-//    die; //stop script
-//}
-//$result = $DBconnection->query($check);
-
 //REGISTER USER
 if (isset($_POST['reg_user'])) {
     //receive all input values from the form
@@ -37,15 +28,6 @@ if (isset($_POST['reg_user'])) {
     $result = $DBconnection->query($user_check_query);
     $user = $result->fetch();
 
-    //if ($user) { //if user exists
-    //    if ($user['username'] === $username) {
-    //        array_push($errors, "Username already exists!");
-    //    }
-
-    //    if ($user['email'] === $email) {
-    //        array_push($errors, "email already exists");
-     //   }
-    //}
     if (empty($username) || empty($email) || empty($password)) {
         header("location: index.php?activity=empty");
         exit();
@@ -73,8 +55,6 @@ if (isset($_POST['reg_user'])) {
         header('location: index.php?activity=success');
         exit();
         }
-    
-    
     
 }
 
