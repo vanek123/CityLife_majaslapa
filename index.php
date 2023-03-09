@@ -21,7 +21,7 @@
 <body>
     <div id="main-bar">
         <div id="topNavigation">
-            <a class="citylife2" href="#gif-cont" style="background-color: #00bcd4;">
+            <a class="citylife2" href="index.php" style="background-color: #00bcd4;">
             <?php echo "CityLife Simulator"?></a>
             <a href="#panel2" class="citylife">About us</a>
             <a href='#panel3' class="citylife">Latest releases</a>
@@ -48,10 +48,10 @@
 
         <div id="gif-cont">
             <div id="gif-border">
-                <img id="gif" src="gif/video-game-pixel-art.gif"> 
+                <img id="gif" src="gif/Gameplay.gif"> 
                 <div id="about_the_game">
                     <h2>About the game</h2>
-                    <p style="color: aliceblue;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione fugit temporibus odio autem. Similique ab quidem beatae corporis earum eum quia eius consectetur quod deleniti omnis, autem tempora, consequatur quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur accusantium repellendus distinctio incidunt ducimus consectetur praesentium reprehenderit illum est. Perferendis ipsam iste debitis nihil ad numquam similique rerum quam ratione? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quidem velit eaque officiis, a expedita ut ullam iure neque alias iusto earum suscipit ab! Officia similique rerum hic. At, eveniet.</p>
+                    <p style="color: aliceblue; font-size: 19px;">CityLife Simulator is a city life simulation game where the user has to climb the career and society ladder to reach a high level of life. The plot of the game takes place in several places: the player's home, work, shop and city. At work, the player can earn money, which can then be exchanged for useful resources in the shop, which will be stored in the inventory until an opportunity arises to use them to improve living conditions. The important thing is that the number of places in the inventory can change and it depends on the clothes and accessories that the player is wearing at the given moment. The player can change both the external appearance of his character by buying clothes and accessories, and the interior of his house by adding furniture and decorations that can be purchased in the store. </p>
                 </div> 
             </div>
 
@@ -69,7 +69,7 @@
             <div id="panel2">
                 <h2 style="margin-left: 20%; color: aliceblue;">About us</h2>
                 <div id="inside-panel2">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium optio libero reprehenderit dolor tenetur iste vel nulla totam, accusamus corrupti, repellendus consectetur error laboriosam! Dolor delectus doloremque quasi earum cum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem dolores magni fugiat earum, aliquam veniam! Itaque temporibus vel porro soluta consequuntur, facilis omnis cupiditate voluptatem dolore quisquam sunt dicta tenetur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis perspiciatis mollitia, sed nesciunt asperiores impedit numquam error illum! Deleniti mollitia est nisi assumenda temporibus possimus nemo totam animi modi consequatur.</p>
+                    <p>Welcome to our small programming company! We specialize in creating innovative and entertaining games that are sure to captivate players of all ages. Our team is made up of passionate and dedicated developers who are committed to delivering high-quality gaming experiences that are both fun and challenging. We believe that games should be a source of joy and entertainment, which is why we strive to create games that are not only visually stunning, but also engaging and interactive. We take pride in our work and are committed to delivering games that exceed our customers' expectations. Our goal is to create games that provide hours of enjoyment, whether you're playing alone or with friends. Thank you for choosing our company and we look forward to creating exciting games for you to enjoy!</p>
                 </div>
             </div>
             
@@ -187,7 +187,7 @@
         <div id="footer">
             <p> © CityLife Simulator 2023 | All rights reserved | <?php if (isset($_SESSION['username'])) {
                                                                             if ($_SESSION['role_ID'] == 1) {
-                                                                                echo "<a class='help' href='../project/admin_guide.pdf' target='_BLANK'>Help</a>";
+                                                                                echo "<a class='help' href='../admin_guide.pdf' target='_BLANK'>Help</a>";
                                                                             }
             else {
                 echo "<a class='help' href='instrukcija.php'> Help </a>";
